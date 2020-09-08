@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  background-color: lightcyan;
+}
+
+body {
+  font-family: helvetica;
+  line-height: 5em;
+  width: 480px;
+}
+
+div {
+border: 2px burlywood solid;
+text-align: center;
+
+}
+
