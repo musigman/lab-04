@@ -1,7 +1,5 @@
 div {
-  float: left;
-  justify-content: center;
-  align-items: center;
+
   border: 2px burlywood solid;
 }
 
@@ -34,9 +32,17 @@ div {
   background-color: #f83800;
  
 }
+
+#aside1 {
+  display: grid;
+  grid-template-columns: 240px, 240px;
+  grid-template-rows: 250px, 250px;
+}
+
 #f {
   width: 240px;
   height: 250px;
+ justify-content: flex-end;
   background-color: #581800;
 
 }
@@ -61,25 +67,34 @@ div {
 
 @media only screen and (min-width: 768px) {
   body {
-    display: center;
+    margin: auto; 
     font-family: helvetica;
     width: 960px; 
   }
-  div {
-    float: left;
-    justify-content: center;
-    align-items: center;
-    border: 2px burlywood solid;
+
+
+
+  main{
+    grid-template-columns: 20fr 19fr 19fr 19fr 19fr;
+    grid-template-rows: 100px 200px 250px 150px;
+    display: grid;
+    
   }
- 
+
   
   #a {
     width: 960px;
     height: 100px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
     background-color: #084060;
-   
+    
   }
   #b {
+    grid-row: 2/3;
+    grid-column: 1/2;
     width: 200px;
     height: 600px;
     background-color: #005088;
@@ -87,42 +102,158 @@ div {
   #c {
     width: 380px;
     height: 200px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
     background-color: #085890;
   }
   #d {
     width: 380px;
     height: 200px;
+    grid-column-start: 4;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
     background-color: #186090;
   }
+
+
   #e {
-    width: 190px;
-    height: 250px;
+    /* width: 190px;
+    height: 250px; */
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 6;
     background-color: #2080c0;
     
   }
   #f {
     width: 190px;
     height: 250px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
     background-color: #90c0e0;
     
   }
   #g {
-    width: 190px;
-    height: 250px;
+    /* width: 190px;
+    height: 250px; */
+    grid-column-start: 3;
+    /* grid-column-end: 3; */
+    grid-row-start: 5;
+    grid-row-end: 3;
     background-color: #80b8d8;
     
   }
   #h {
     width: 190px;
     height: 250px;
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
     background-color: #3890c8;
    
   }
   #i {
-    width: 760px;
-    height: 150px;
+    /* width: 760px;
+    height: 150px; */
+    grid-row: 4/6;
+    grid-column: 2/10;
     background-color: #60a8d0;
     
     
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  body {
+    margin: auto; 
+    font-family: helvetica;
+    width: 1300px; 
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px, 100px 100px 100px 100px;
+  }
+  #a {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #287028;
+  }
+  #b {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color:#448438;
+  }
+  #c {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #609848;
+  }
+  #d {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #7cac58;
+  }
+  #e {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  
+    background-color: #98c068;
+  }
+  #f {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  
+    background-color: #b6ccb3;
+  }
+  #g {
+    width: 1200px;
+    height: 100px;
+ 
+    background-color: #bbceb9;
+  }
+  #g {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+ 
+    background-color:#acccae;
+  }
+  #h {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  
+    background-color: #a5cca9;
+  }
+  #i {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    background-color: #9ccaa8;
   }
 }
