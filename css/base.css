@@ -5,13 +5,19 @@
 
 body {
   font-family: helvetica;
-  line-height: 5em;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 250px, 250px;
   width: 480px;
+  margin: auto; 
 }
 
 div {
-border: 2px burlywood solid;
-text-align: center;
+border: 1px burlywood solid;
+display: flex;
+align-items: center;
+justify-content: center;
+
 
 }
 
